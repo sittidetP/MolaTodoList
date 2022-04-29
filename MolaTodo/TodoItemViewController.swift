@@ -53,7 +53,10 @@ class TodoItemViewController: UIViewController {
         if var todoItem = todoItem {
             todoItem.details = detailsTextView.text
             todoItem.dueDate = dueDatePickerView.date
-            //todoItem.type = 
+            
+            let selectedValue = todoTypePickerView.selectedRow(inComponent: 0)
+            //print(selectedValue)
+            todoItem.type = TodoType.allItem[selectedValue]
             todoItem.isDone = isDoneSwitch.isOn
             
             
@@ -80,5 +83,4 @@ extension TodoItemViewController: UIPickerViewDataSource, UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return TodoType.allItem[row].rawValue
     }
-    
 }

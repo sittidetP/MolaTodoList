@@ -29,7 +29,7 @@ enum TodoType: String{
     }
     
     var icon: UIImage? {
-        print(self.rawValue)
+        //print(self.rawValue)
         return UIImage(named: self.rawValue)
     }
 }

@@ -96,7 +96,7 @@ class TodoListViewController: UIViewController, UITableViewDataSource, TodoItemV
             todoList.append(todoItem)
         }else {
             if let index = indexSelectedCell {
-                print(todoItem.type)
+                //print(todoItem.type)
                 todoList[index] = todoItem
             }
         }
