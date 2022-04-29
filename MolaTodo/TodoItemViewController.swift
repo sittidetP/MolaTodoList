@@ -34,6 +34,10 @@ class TodoItemViewController: UIViewController {
         
         todoTypePickerView.dataSource = self
         todoTypePickerView.delegate = self
+        
+        if let todoItem = todoItem {
+            todoTypePickerView.selectRow(todoItem.getTypeIndex(), inComponent: 0, animated: false)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,6 +17,19 @@ struct Todo {
     var icon: UIImage? {
         return UIImage(named: type.rawValue)
     }
+    
+    func getTypeIndex() -> Int {
+        if type == .todoList {
+            return 0
+        }
+        if type == .shopping {
+            return 1
+        }
+        if type == .work {
+            return 2
+        }
+        return 0
+    }
 }
 
 enum TodoType: String{
